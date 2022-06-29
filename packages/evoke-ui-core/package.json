@@ -10,18 +10,30 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "build:styles": "npx tailwindcss -i ./src/styles/main.css -o ./dist/styles.css",
+    "build": "yarn build:styles && tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "yarm build:styles && tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
+  "peerDependencies": {
+    "tailwind": "3.x"
+  },
   "devDependencies": {
     "@evoke-ui/tsconfig": "*",
+    "@storybook/addon-docs": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-postcss": "^2.0.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "autoprefixer": "^10.4.7",
     "eslint": "^8.15.0",
     "eslint-config-evoke-ui": "*",
+    "postcss": "^8.4.14",
     "react": "^18.1.0",
+    "storybook-dark-mode": "^1.1.0",
+    "tailwindcss": "^3.1.4",
     "tsup": "^5.10.1",
     "typescript": "^4.5.3"
   },
