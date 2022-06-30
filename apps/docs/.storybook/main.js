@@ -1,17 +1,18 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(mdx|ts|tsx)'],
+  stories: ["../stories/**/*.stories.@(mdx|ts|tsx)"],
   addons: [
-    '@storybook/addon-docs',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    'storybook-dark-mode',
+    "@storybook/addon-docs",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "storybook-dark-mode",
+    "@storybook/addon-a11y",
     {
-      name: '@storybook/addon-postcss',
+      name: "@storybook/addon-postcss",
       options: {
         postcssLoaderOptions: {
-          implementation: require('postcss'),
+          implementation: require("postcss"),
         },
       },
     },
   ],
-}
+};

@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build:styles": "npx tailwindcss -i ./src/styles/main.css -o ./dist/styles.css",
+    "build:styles": "npx tailwindcss -i ./src/styles/main.scss -o ./dist/styles.css",
     "build": "yarn build:styles && tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "yarm build:styles && tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",

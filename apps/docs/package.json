@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@evoke-ui/core": "*",
+    "@storybook/addon-a11y": "^6.5.9",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

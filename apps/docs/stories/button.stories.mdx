@@ -1,7 +1,11 @@
 import { Button } from "@evoke-ui/core/src";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
-<Meta title="Components/Button" component={Button} />
+<Meta title="Atoms/Button" component={Button} />
+
+export const Template = ({ children, ...args }) => {
+  return <Button {...args}>{children}</Button>;
+};
 
 # Button
 
@@ -14,10 +18,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
 ## Examples
 
 <Preview>
+  <Story
+    name="Default"
+    args={{
+      theme: "primary",
+      children: "Click Me!",
+    }}
+    argTypes={{
+      theme: {
+        options: ["primary", "secondary", "success", "info", "warn", "danger"],
+        control: { type: "radio" },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
   <Story name="Themes">
-    <div className="space-x-2">
-      <Button>Primary</Button>
+    <div className="space-x-2 mb-4">
+      <Button theme="primary">Primary</Button>
       <Button theme="secondary">Secondary</Button>
+    </div>
+    <div className="space-x-2 mb-4">
+      <Button theme="success">Success</Button>
+      <Button theme="info">Information</Button>
+      <Button theme="warn">Warning</Button>
+      <Button theme="danger">Danger</Button>
     </div>
   </Story>
 </Preview>
