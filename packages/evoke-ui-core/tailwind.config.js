@@ -32,6 +32,7 @@ module.exports = {
         evoke: {
           dark: "#232628",
           light: "#F6F7F7",
+          primary: "#ff276a",
         },
         ansi: {
           blue: "#75dff2",

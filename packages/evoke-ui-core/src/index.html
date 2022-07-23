@@ -1,10 +1,11 @@
-<div className="flex min-h-screen justify-center items-center">
-  <h1 className="text-black dark:text-off-white text-3xl">
-    evoke<span className="text-accent">[</span>
-    <span className="text-bright-black dark:text-bright-white">ui</span>
-    <span className="text-accent">]</span>
-  </h1>
-</div>
-<div className="space-x-4 space-x-2">
-  <button className="bg-cyan bg-accent">CTA</button>
-</div>
+<h2
+className="font-sans text-3xl text-black dark:text-off-white"
+{...props}
+>
+{labelOne}
+<span className="font-sans text-primary">[</span>
+<span className="font-sanstext-bright-black dark:text-bright-white">
+  {labelTwo}
+</span>
+<span className="font-sans text-primary">]</span>
+</h2>
