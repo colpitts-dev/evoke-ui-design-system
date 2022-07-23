@@ -30,6 +30,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.15.0",
     "eslint-config-evoke-ui": "*",
+    "plop": "^3.1.1",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
     "storybook-dark-mode": "^1.1.0",

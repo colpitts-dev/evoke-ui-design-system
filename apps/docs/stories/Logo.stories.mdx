@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
+
+import { Logo } from "@evoke-ui/core/src";
+
+<Meta
+  title="Molecules/Logo"
+  component={Logo}
+  args={{ labelOne: "evoke", labelTwo: "ui" }}
+/>
+
+# Logo
+
+export const Template = (args) => <Logo {...args} />;
+
+<Canvas>
+  <Story name="Logo">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable of={Logo} />

@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-
-<Meta title="Welcome/Introduction" />
+import { Logo } from "@evoke-ui/core/src";
+<Meta title="Welcome/Introduction" />;
 
 # Welcome
 
@@ -9,11 +9,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
 <Canvas>
   <Story name="Introduction">
     <article className="flex min-h-screen justify-center items-center">
-      <h1 className="text-black dark:text-off-white text-3xl">
-        evoke<span className="text-primary">[</span>
-        <span className="text-bright-black dark:text-bright-white">ui</span>
-        <span className="text-primary">]</span>
-      </h1>
+      <Logo labelOne="evoke" labelTwo="ui" />
     </article>
   </Story>
 </Canvas>
