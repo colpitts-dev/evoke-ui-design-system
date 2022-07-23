@@ -1,0 +1,52 @@
+import { Text } from "@evoke-ui/core/src";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+<Meta title="Atoms/Typography/Text" component={Text} />
+
+## Props
+
+<Props of={Text} />
+
+# Default
+
+The text component should be used whenever rendering copy
+
+export const copy =
+  'Croissant soufflé sesame snaps shortbread marshmallow sesame snaps cake croissant.'
+
+<Preview>
+  <Story name="Default">
+    <Text>{copy}</Text>
+  </Story>
+</Preview>
+
+# Text Sizes
+
+The text component should be used whenever rendering copy
+
+<Preview>
+  <Story name="Size">
+    <Text className="text-lg">Large: {copy}</Text>
+    <Text>Base: {copy}</Text>
+    <Text className="text-sm">Small: {copy}</Text>
+  </Story>
+</Preview>
+
+# Text Colors
+
+<Preview>
+  <Story name="Color">
+    <Text className="text-ansi-blue dark:text-ansi-blue">{copy}</Text>
+    <Text className="text-ansi-cyan dark:text-ansi-cyan">{copy}</Text>
+    <Text className="text-ansi-green dark:ansi-ansi-text-green">{copy}</Text>
+    <Text className="text-ansi-magenta dark:text-ansi-magenta">{copy}</Text>
+    <Text className="text-ansi-red dark:text-ansi-red">{copy}</Text>
+    <Text className="text-ansi-yellow dark:text-ansi-yellow">{copy}</Text>
+    <Text className="text-bright-blue dark:text-bright-blue">{copy}</Text>
+    <Text className="text-bright-cyan dark:text-bright-cyan">{copy}</Text>
+    <Text className="text-bright-green dark:text-bright-green">{copy}</Text>
+    <Text className="text-bright-magenta dark:text-bright-magenta">{copy}</Text>
+    <Text className="text-bright-red dark:text-bright-red">{copy}</Text>
+    <Text className="text-bright-yellow dark:text-bright-yellow">{copy}</Text>
+  </Story>
+</Preview>

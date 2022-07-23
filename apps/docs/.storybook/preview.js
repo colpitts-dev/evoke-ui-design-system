@@ -40,7 +40,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Welcome", "Atoms", "Molecules", "Organisms"],
+      order: ["Welcome", "Atoms", ["Typography"], "Molecules", "Organisms"],
     },
   },
 };

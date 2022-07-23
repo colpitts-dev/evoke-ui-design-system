@@ -1,5 +1,8 @@
 module.exports = {
-  stories: ["../stories/**/*.stories.@(mdx|ts|tsx)"],
+  stories: [
+    "../stories/**/*.stories.@(mdx|ts|tsx)",
+    "../../../packages/evoke-ui-core/src/**/*.stories.@(mdx|ts|tsx)"
+  ],
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-links",
