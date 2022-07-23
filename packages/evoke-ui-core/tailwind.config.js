@@ -31,6 +31,8 @@ module.exports = {
         info: "var(--color-info)",
         warn: "var(--color-warn)",
         danger: "var(--color-danger)",
+        black: "#232628",
+        white: "#ffffff",
         evoke: {
           dark: "#232628",
           light: "#F6F7F7",
@@ -44,7 +46,6 @@ module.exports = {
           red: "#fc4384",
           yellow: "#ffa727",
         },
-        black: "#232628",
         "off-white": "#d5d5d0",
         "bright-black": "#626566",
         "bright-white": "#f9f9f4",

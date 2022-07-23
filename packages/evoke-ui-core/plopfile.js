@@ -56,30 +56,18 @@ module.exports = (plop) => {
       },
       {
         type: 'add',
-        path: 'src/index.ts',
-        templateFile: '.templates/index.ts.hbs',
+        path: 'src/index.tsx',
+        templateFile: '.templates/index.tsx.hbs',
         // If index.js already exists in this location, skip this action
         skipIfExists: true,
       },
       {
         // Action type 'append' injects a template into an existing file
         type: 'append',
-        path: 'src/index.ts',
-        pattern: `/* EVOKE_IMPORT */`,
-        template: `import { {{pascalCase name}}, {{pascalCase name}}Props } from './components/{{pascalCase name}}';`,
-      },
-      {
-        type: 'append',
-        path: 'src/index.ts',
+        path: 'src/index.tsx',
         pattern: `/* EVOKE_EXPORT */`,
-        template: `  {{pascalCase name}},`,
-      },
-      {
-        type: 'append',
-        path: 'src/index.ts',
-        pattern: `/* EVOKE_EXPORT_TYPE */`,
-        template: `  {{pascalCase name}}Props,`,
-      },
+        template: `export { {{pascalCase name}}, type {{pascalCase name}}Props } from './components/{{pascalCase name}}';`,
+      }
     ],
   });
 };

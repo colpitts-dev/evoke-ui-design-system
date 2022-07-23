@@ -14,7 +14,8 @@
     "build": "yarn build:styles && tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "yarm build:styles && tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "generate": "npx plop"
   },
   "peerDependencies": {
     "tailwind": "3.x"
@@ -40,5 +41,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@testing-library/react": "^13.3.0"
   }
 }

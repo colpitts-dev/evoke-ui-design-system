@@ -11,7 +11,7 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
 export const Text: FC<TextProps> = ({ className, children, ...props }) => {
   return (
     <p
-      className={`font-secondary text-black dark:text-off-white ${
+      className={`font-secondary text-dark dark:text-white ${
         className ? className : ''
       }`}
       {...props}
