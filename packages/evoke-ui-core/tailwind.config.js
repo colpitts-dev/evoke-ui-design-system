@@ -16,8 +16,10 @@ module.exports = {
       xl: "1440px",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
+      sans: ["Quicksand", "sans-serif"],
       serif: ["Merriweather", "serif"],
+      primary: ["var(--font-primary)"],
+      secondary: ["var(--font-secondary)"],
     },
     extend: {
       colors: {

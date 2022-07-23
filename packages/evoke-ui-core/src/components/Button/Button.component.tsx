@@ -7,6 +7,7 @@ type ButtonTheme =
   | "info"
   | "warn"
   | "danger";
+
 export interface ButtonProps {
   children: React.ReactNode;
   theme: ButtonTheme;

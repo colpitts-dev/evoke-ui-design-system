@@ -1,10 +1,10 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Quicksand&display=swap");
+
 /* Tailwind 3 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Quicksand&display=swap");
 
 :root {
   --color-dark: theme("colors.evoke.dark");
@@ -16,36 +16,36 @@
   --color-warn: theme("colors.amber.400");
   --color-danger: theme("colors.red.600");
 
-  --font-sans: theme("fontFamily.sans");
-  --font-serif: theme("fontFamily.serif");
+  --font-primary: theme("fontFamily.serif");
+  --font-secondary: theme("fontFamily.sans");
 }
 
 h1,
 .h1 {
-  @apply text-5xl;
+  @apply text-5xl font-primary;
 }
 
 h2,
 .h2 {
-  @apply text-4xl;
+  @apply text-4xl font-primary;
 }
 
 h3,
 .h3 {
-  @apply text-3xl;
+  @apply text-3xl font-primary;
 }
 
 h4,
 .h4 {
-  @apply text-xl;
+  @apply text-xl font-secondary;
 }
 
 h5,
 .h5 {
-  @apply text-sm font-light;
+  @apply text-sm font-secondary font-light;
 }
 
 h6,
 .h6 {
-  @apply text-sm font-bold uppercase;
+  @apply text-sm uppercase font-secondary font-bold;
 }
