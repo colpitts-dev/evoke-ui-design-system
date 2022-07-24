@@ -4,14 +4,28 @@ import { CopyBlock } from './CopyBlock.component';
 
 <Meta title="Molecules/CopyBlock" component={ CopyBlock } />
 
+export const Template = ({ children, ...args }) => {
+  return <CopyBlock {...args}>{children}</CopyBlock>;
+};
+
 # CopyBlock
 
 Let's define a story for our `CopyBlock` component:
 
-<Canvas>
-  <Story name="Copy Block">
-    <CopyBlock heading="Cupcake ipsum dolor sit amet gummies brownie." content="Liquorice soufflé pudding tootsie roll jujubes candy gingerbread. Danish tart cotton candy dragée tart gummies jelly-o fruitcake pastry. Chupa chups bonbon jujubes marshmallow jelly-o marzipan gingerbread. Cake fruitcake chupa chups donut carrot cake chocolate cake. Liquorice cookie wafer donut danish tiramisu gingerbread pastry. Icing cupcake croissant chocolate jelly-o pie dragée biscuit. Cake pie cookie caramels jelly beans cake pastry cotton candy. Dragée marshmallow macaroon powder macaroon wafer. Candy soufflé carrot cake jelly-o candy powder tootsie roll powder cookie. Caramels pudding dragée pudding chupa chups oat cake macaroon jelly beans. Sugar plum gummies fruitcake bonbon pastry candy cheesecake. Tootsie roll lemon drops jujubes biscuit marzipan topping carrot cake muffin shortbread. Chupa chups chocolate bar tiramisu sesame snaps oat cake brownie pie. Lollipop sweet chocolate cake apple pie sweet cake candy lollipop." />
-  </Story>
-</Canvas>
+## Props
 
 <ArgsTable of={ CopyBlock } />
+
+## Default
+
+<Canvas>
+  <Story name="Default"
+    args={{
+        title: "Jelly-o cheesecake croissant lemon drops jelly-o.",
+        content: "Sweet sweet roll candy canes liquorice caramels gummies. Candy sugar plum apple pie cotton candy halvah cake liquorice fruitcake. Cake pastry biscuit chocolate jelly beans cake pudding danish dessert. Gingerbread liquorice danish toffee cheesecake biscuit cupcake. Danish pudding caramels halvah candy canes gummies jelly pie biscuit. Bear claw cupcake dessert chupa chups jelly pastry toffee. Tart gummies candy jelly-o toffee chocolate cake jujubes danish shortbread. Tart sweet liquorice muffin bear claw halvah jujubes pastry dragée. Gummi bears powder biscuit pastry lemon drops dragée biscuit cheesecake chocolate cake. Wafer cookie dessert fruitcake sweet roll pie. Cake tootsie roll wafer cake jelly beans cake macaroon tootsie roll.",
+        headingLevel: 3
+      }}
+    >
+    {Template.bind({})}
+  </Story>
+</Canvas>
