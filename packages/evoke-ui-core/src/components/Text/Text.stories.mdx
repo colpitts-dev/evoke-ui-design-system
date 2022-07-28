@@ -1,5 +1,5 @@
 import { Text } from "@evoke-ui/core/src";
-import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
 
 <Meta title="Atoms/Typography/Text" component={Text} />
 
@@ -12,25 +12,25 @@ The Text component should be used whenever rendering copy on a page
 export const copy =
   'Croissant soufflé sesame snaps shortbread marshmallow sesame snaps cake croissant.'
 
-<Preview>
+<Canvas>
   <Story name="Default">
     <Text>{copy}</Text>
   </Story>
-</Preview>
+</Canvas>
 
 ## Text Sizes
 
-<Preview>
+<Canvas>
   <Story name="Size">
     <Text size="lg">Large: {copy}</Text>
     <Text>Base: {copy}</Text>
     <Text size="sm">Small: {copy}</Text>
   </Story>
-</Preview>
+</Canvas>
 
 ## Text Colors
 
-<Preview>
+<Canvas>
   <Story name="Color">
     <Text className="text-ansi-blue dark:text-ansi-blue">{copy}</Text>
     <Text className="text-ansi-cyan dark:text-ansi-cyan">{copy}</Text>
@@ -45,8 +45,8 @@ export const copy =
     <Text className="text-bright-red dark:text-bright-red">{copy}</Text>
     <Text className="text-bright-yellow dark:text-bright-yellow">{copy}</Text>
   </Story>
-</Preview>
+</Canvas>
 
 ## Props
 
-<ArgsTabls of={Text} />
+<ArgsTable of={Text} />
