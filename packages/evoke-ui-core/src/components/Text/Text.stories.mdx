@@ -1,15 +1,13 @@
 import { Text } from "@evoke-ui/core/src";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
 
 <Meta title="Atoms/Typography/Text" component={Text} />
 
-## Props
+# Text
 
-<Props of={Text} />
+The Text component should be used whenever rendering copy on a page
 
-# Default
-
-The text component should be used whenever rendering copy
+## Default
 
 export const copy =
   'Croissant soufflé sesame snaps shortbread marshmallow sesame snaps cake croissant.'
@@ -20,9 +18,7 @@ export const copy =
   </Story>
 </Preview>
 
-# Text Sizes
-
-The text component should be used whenever rendering copy
+## Text Sizes
 
 <Preview>
   <Story name="Size">
@@ -32,7 +28,7 @@ The text component should be used whenever rendering copy
   </Story>
 </Preview>
 
-# Text Colors
+## Text Colors
 
 <Preview>
   <Story name="Color">
@@ -50,3 +46,7 @@ The text component should be used whenever rendering copy
     <Text className="text-bright-yellow dark:text-bright-yellow">{copy}</Text>
   </Story>
 </Preview>
+
+## Props
+
+<ArgsTabls of={Text} />

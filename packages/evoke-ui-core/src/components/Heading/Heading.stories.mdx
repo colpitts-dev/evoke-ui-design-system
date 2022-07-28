@@ -1,15 +1,11 @@
 import { Heading } from "@evoke-ui/core/src";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Preview, ArgsTable } from "@storybook/addon-docs/blocks";
 
 <Meta title="Atoms/Typography" component={Heading} />
 
-## Props
-
-<Props of={Heading} />
-
 # Heading
 
-Let's define a story for our `Heading` component:
+Used to render any heading level copy
 
 export const copy = "Powder pastry gingerbread cupcake chocolate cake.";
 
@@ -23,3 +19,7 @@ export const copy = "Powder pastry gingerbread cupcake chocolate cake.";
     <Heading level="h6">h6: {copy}</Heading>
   </Story>
 </Preview>
+
+## Props
+
+<ArgsTable of={Heading} />

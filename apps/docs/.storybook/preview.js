@@ -1,3 +1,7 @@
+import React from "react";
+import { useDarkMode } from "storybook-dark-mode";
+import { DocsContainer } from './DocsContainer';
+
 import { themes } from "@storybook/theming";
 import Logo from "./assets/logo.png";
 import LogoDark from "./assets/logo-dark.png";
@@ -6,7 +10,7 @@ import "@evoke-ui/core/dist/styles.css";
 
 const evokeTheme = {
   brandTitle: "Evoke UI",
-  brandUrl: "https://colpitts.dev",
+  brandUrl: "https://www.colpitts.dev",
   brandImage: "https://place-hold.it/350x150",
   brandTarget: "_blank",
 };
@@ -15,6 +19,12 @@ const evokeTheme = {
 export const parameters = {
   // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
   actions: { argTypesRegex: "^on.*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
   //layout: 'fullscreen',
   darkMode: {
     classTarget: "html",
@@ -42,5 +52,9 @@ export const parameters = {
     storySort: {
       order: ["Welcome", "Atoms", ["Typography"], "Molecules", "Organisms"],
     },
+  },
+  docs: {
+    // theme: themes.dark,
+    container: DocsContainer,
   },
 };
