@@ -1,15 +1,16 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Logo } from "@evoke-ui/core/src";
-<Meta title="Welcome/Introduction" />;
+import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
+
+<Meta title="Welcome" component={Logo} />
 
 # Welcome
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
+Welcome to Evoke UI Design System
 
 <Canvas>
-  <Story name="Introduction">
-    <article className="flex min-h-screen justify-center items-center">
-      <Logo labelOne="evoke" labelTwo="ui" />
-    </article>
+  <Story name="Introduction" parameters={{docs: { disable: true }}}>
+    <div className="flex min-h-screen justify-center items-center">
+      <Logo />
+    </div>
   </Story>
 </Canvas>

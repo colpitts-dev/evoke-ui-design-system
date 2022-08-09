@@ -1,5 +1,5 @@
 import { Button } from "@evoke-ui/core/src";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
 
 <Meta title="Atoms/Button" component={Button} />
 
@@ -9,15 +9,11 @@ export const Template = ({ children, ...args }) => {
 
 # Button
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur tempor, nisl nunc egestas nisi, euismod aliquam nisl nunc euismod.
-
-## Props
-
-<Props of={Button} />
+A graphical control element that provides the user a simple way to trigger an event
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story
     name="Default"
     args={{
@@ -33,11 +29,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
   >
     {Template.bind({})}
   </Story>
-</Preview>
+</Canvas>
 
 ## Themes
 
-<Preview>
+<Canvas>
   <Story name="Themes">
     <div className="space-x-2 mb-4">
       <Button theme="primary">Primary</Button>
@@ -50,4 +46,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl ege
       <Button theme="danger">Danger</Button>
     </div>
   </Story>
-</Preview>
+</Canvas>
+
+## Props
+
+<ArgsTable of={ Button } />
