@@ -5,7 +5,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,mdx,html}"],
   safelist: [
     {
-      pattern: /./,
+      pattern: /.*/,
     },
   ],
   theme: {
