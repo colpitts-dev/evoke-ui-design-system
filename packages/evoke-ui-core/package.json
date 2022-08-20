@@ -1,6 +1,6 @@
 {
   "name": "@evoke-ui/core",
-  "version": "0.1.4",
+  "version": "0.1.21",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build:styles": "npx tailwindcss -i ./src/styles/main.scss -o ./dist/styles.css",
+    "build:styles": "cross-env NODE_ENV='production' npx tailwindcss -i ./src/styles/main.scss -o ./dist/styles.css --minify",
     "build": "yarn build:styles && tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "yarm build:styles && tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
@@ -18,7 +18,7 @@
     "generate": "npx plop"
   },
   "peerDependencies": {
-    "tailwind": "3.x"
+    "tailwind": "^3.1.4"
   },
   "devDependencies": {
     "@evoke-ui/tsconfig": "*",
@@ -29,6 +29,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
     "eslint": "^8.15.0",
     "eslint-config-evoke-ui": "*",
     "plop": "^3.1.1",

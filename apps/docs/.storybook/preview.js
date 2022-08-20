@@ -1,12 +1,13 @@
 import React from "react";
 import { useDarkMode } from "storybook-dark-mode";
-import { DocsContainer } from './DocsContainer';
-
 import { themes } from "@storybook/theming";
+
+import { DocsContainer } from './DocsContainer';
 import Logo from "./assets/logo.png";
 import LogoDark from "./assets/logo-dark.png";
 
-import "@evoke-ui/core/dist/styles.css";
+// Uses a non-minified version of evoke-ui-core styles.css
+import "./assets/styles.css";
 
 const evokeTheme = {
   brandTitle: "Evoke UI",
@@ -14,6 +15,16 @@ const evokeTheme = {
   brandImage: "https://place-hold.it/350x150",
   brandTarget: "_blank",
 };
+
+
+export const decorators = [
+  (Story) => {
+    // TODO: fix tailwind darkmode not playing nice in Stories
+    console.log(useDarkMode())
+
+    return <Story />
+  }
+]
 
 // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
 export const parameters = {
@@ -27,10 +38,11 @@ export const parameters = {
   },
   //layout: 'fullscreen',
   darkMode: {
-    classTarget: "html",
+    classTarget: "body",
     darkClass: "dark",
     lightClass: "light",
     stylePreview: true,
+
     // Override the default dark theme
     dark: {
       ...themes.dark,

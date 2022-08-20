@@ -23,17 +23,18 @@ export const Logo: FC<LogoProps> = ({
   theme = "primary",
   ...props
 }) => {
+  const textColor = `text-${theme}`
   return (
     <h2
-      className="font-secondary text-3xl text-black dark:text-off-white"
+      className="text-3xl text-black font-secondary dark:text-off-white"
       {...props}
     >
       {labelOne}
-      <span className={`text-${theme}`}>[</span>
+      <span className={textColor}>[</span>
       <span className="text-bright-black dark:text-bright-white">
         {labelTwo}
       </span>
-      <span className={`text-${theme}`}>]</span>
+      <span className={textColor}>]</span>
     </h2>
   );
 };

@@ -2,8 +2,6 @@ import React, { FC, HTMLAttributes, ReactNode } from 'react'
 import { Heading } from '../Heading'
 import { Text } from '../Text'
 
-import './CopyBlock.styles.css'
-
 export interface CopyBlockProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel?: 1 | 2 | 3
   textSize?: 'sm' | 'base' | 'lg'

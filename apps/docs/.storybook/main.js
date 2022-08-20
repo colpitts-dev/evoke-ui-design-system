@@ -4,12 +4,12 @@ module.exports = {
     "../../../packages/evoke-ui-core/src/**/*.stories.@(mdx|ts|tsx)"
   ],
   addons: [
+    "@storybook/addon-essentials",
     "@storybook/addon-docs",
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "storybook-dark-mode",
     "@storybook/addon-a11y",
     "@storybook/theming",
+    "storybook-dark-mode/register",
     {
       name: "@storybook/addon-postcss",
       options: {

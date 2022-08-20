@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006",
+    "evoke:styles": "npx tailwindcss -c ../../packages/evoke-ui-core/tailwind.config.js -i ../../packages/evoke-ui-core/src/styles/main.scss -o .storybook/assets/styles.css",
+    "dev": "yarn evoke:styles && start-storybook -p 6006",
     "build": "build-storybook",
     "preview-storybook": "serve storybook-static",
     "clean": "rm -rf .turbo && rm -rf node_modules"
