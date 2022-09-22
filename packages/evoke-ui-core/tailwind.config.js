@@ -4,6 +4,7 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/components/**/*.{ts,tsx,mdx}'],
   safelist: [
+    "dark",
     {
       pattern: /^bg-/,
     },
