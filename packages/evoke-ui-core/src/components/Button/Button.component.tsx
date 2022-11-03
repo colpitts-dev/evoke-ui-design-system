@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react'
+import { FC, HTMLAttributes, ReactNode } from 'react'
 
 type ButtonTheme =
   | 'primary'
@@ -9,11 +9,11 @@ type ButtonTheme =
   | 'danger'
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
+  children: ReactNode
   theme: ButtonTheme
 }
 
-export const Button: FC<ButtonProps> = ({theme, onClick, ...props}) => {
+export const Button: FC<ButtonProps> = ({ theme, onClick, ...props }) => {
   let foreground: string
   switch (theme) {
     case 'primary':
