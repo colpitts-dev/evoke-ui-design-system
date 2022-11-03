@@ -1,3 +1,3 @@
-export { CopyBlock } from './CopyBlock.component';
+export { CopyBlock } from './CopyBlock.component'
 
-export type { CopyBlockProps } from './CopyBlock.component';
+export type { CopyBlockProps } from './CopyBlock.component'

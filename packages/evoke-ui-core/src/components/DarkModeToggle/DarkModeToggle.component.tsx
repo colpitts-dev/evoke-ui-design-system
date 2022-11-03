@@ -1,4 +1,10 @@
-import React, { FC, useEffect, useState, HTMLAttributes, ReactNode } from 'react'
+import React, {
+  FC,
+  useEffect,
+  useState,
+  HTMLAttributes,
+  ReactNode,
+} from 'react'
 
 export interface DarkModeToggleProps extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode
@@ -23,20 +29,17 @@ export const DarkModeToggle: FC<DarkModeToggleProps> = ({
     setIsDarkMode(initDarkMode)
 
     window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", function (e) {
-        const colorScheme = e.matches ? "dark" : "light";
-        if (colorScheme === "dark") {
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', function (e) {
+        const colorScheme = e.matches ? 'dark' : 'light'
+        if (colorScheme === 'dark') {
           document.body.classList.add('dark')
           setIsDarkMode(true)
         } else {
           document.body.classList.remove('dark')
           setIsDarkMode(false)
         }
-      });
-
-
-
+      })
   }, [])
 
   const handleToggleDarkMode = () => {
@@ -49,9 +52,7 @@ export const DarkModeToggle: FC<DarkModeToggleProps> = ({
   return (
     <button onClick={handleToggleDarkMode} className={className} {...props}>
       {isDarkMode ? (
-        <i className="cursor-pointer text-primary material-icons">
-          light_mode
-        </i>
+        <i className="cursor-pointer text-primary material-icons">light_mode</i>
       ) : (
         <i className="cursor-pointer text-bright-black material-icons">
           dark_mode

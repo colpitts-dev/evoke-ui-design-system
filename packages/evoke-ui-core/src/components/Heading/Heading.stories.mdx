@@ -1,5 +1,5 @@
-import { Heading } from "@evoke-ui/core/src";
-import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
+import { Heading } from '@evoke-ui/core/src'
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs'
 
 <Meta title="Atoms/Typography" component={Heading} />
 
@@ -7,12 +7,12 @@ import { Canvas, Meta, Story, ArgsTable } from "@storybook/addon-docs";
 
 Used to render any heading level copy
 
-export const copy = "Powder pastry gingerbread cupcake chocolate cake.";
+export const copy = 'Powder pastry gingerbread cupcake chocolate cake.'
 
 <Canvas>
   <Story name="Heading" className="space-y-4">
     <Heading level="h1">h1: {copy}</Heading>
-    <Heading level="h2">h2: {copy}</Heading>
+    <Heading>h2: {copy}</Heading>
     <Heading level="h3">h3: {copy}</Heading>
     <Heading level="h4">h4: {copy}</Heading>
     <Heading level="h5">h5: {copy}</Heading>

@@ -25,7 +25,9 @@ export const CopyBlock: FC<CopyBlockProps> = ({
         {title}
       </Heading>
       <br />
-      <Text className="CopyBlock__Text" size={textSize}>{content}</Text>
+      <Text className="CopyBlock__Text" size={textSize}>
+        {content}
+      </Text>
     </div>
   )
 }
