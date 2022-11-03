@@ -1,37 +1,46 @@
-import * as React from "react";
+import React, { FC, HTMLAttributes, ReactNode } from 'react'
 
 type ButtonTheme =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "info"
-  | "warn"
-  | "danger";
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'info'
+  | 'warn'
+  | 'danger'
 
-export interface ButtonProps {
-  children: React.ReactNode;
-  theme: ButtonTheme;
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  children?: ReactNode
+  theme?: ButtonTheme
 }
 
-export function Button(props: ButtonProps) {
-  let foreground: string;
-  switch (props.theme) {
-    case "primary":
-    case "secondary":
-    case "danger":
-      foreground = "white";
-      break;
+export const Button: FC<ButtonProps> = ({
+  children,
+  theme,
+  onClick,
+  ...props
+}) => {
+  let foreground: string
+  switch (theme) {
+    case 'primary':
+    case 'secondary':
+    case 'danger':
+      foreground = 'white'
+      break
     default:
-      foreground = "black";
+      foreground = 'black'
   }
   return (
-    <button className={`py-3 text-${foreground} px-7 bg-${props.theme}`}>
-      {props.children}
+    <button
+      className={`py-3 text-${foreground} px-7 bg-${theme}`}
+      onClick={onClick}
+      {...props}
+    >
+      {children}
     </button>
-  );
+  )
 }
 
-Button.displayName = "Button";
+Button.displayName = 'Button'
 Button.defaultProps = {
-  theme: "primary",
-};
+  theme: 'primary',
+}
